@@ -3,7 +3,8 @@
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/morris.css') }}">
-    <meta http-equiv="refresh" content="5">
+    <meta http-equiv="refresh" content="11">
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts-en.min.js"></script>
 {% endblock %} 
 {% block content %}
 <div class="row">
@@ -13,6 +14,13 @@
     <!-- /.col-lg-12 -->
 </div>
 <!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        {{sentiment_pie|safe}}
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
 
 <!-- /.row -->
 <div class="row">
