@@ -80,6 +80,7 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'news_comment_spider.pipelines.NewsCommentSpiderPipeline': 300,
+    'news_comment_spider.pipelines.SentimentCalculationPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
